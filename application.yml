@@ -1,0 +1,10 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://eureka:khTUcUUQ33WkJGC@localhost:8761/eureka
+    instance-info-replication-interval-seconds: 5
+    initial-instance-info-replication-interval-seconds: 5
+
+#url default zone en localhost, no corre en sub red de docker, corre a nivel maquina
