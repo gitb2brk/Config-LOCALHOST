@@ -27,3 +27,4 @@ eureka:
         port: 9090
 
 ms-rioblanco.url: http://200.42.173.148:8080/rioblanco/v1/
+ms-foleador.url: http://localhost:8087/semipFoleador/v1/
