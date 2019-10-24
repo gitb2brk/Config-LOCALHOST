@@ -10,15 +10,15 @@ spring:
       ddl-auto: create-drop
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/SEMIP
-    username: postgres
-    password: 123
+    url: ${URL_DATA:jdbc:postgresql://localhost:5432/SEMIP}
+    username: ${USER_DATA:postgres}
+    password: ${PW_DATA:123}
     driverClassName: org.postgresql.Driver
   data:
     mongodb:
-      host: 127.0.0.1
+      host: ${URL_DOCUMENT:127.0.0.1}
       port: 27017
-      database: repo_receta
+      database: ${DB_DOCUMENT:repo_receta}
 
 eureka:
   instance:
@@ -27,7 +27,7 @@ eureka:
         port: 9090
 
 ms-rioblanco.url: http://200.42.173.148:8080/rioblanco/v1/
-ms-foleador.url: http://localhost:8087/semipFoleador/v1/
+ms-foleador.url: ${MS_FOLEADOR:http://localhost:8087/semipFoleador/v1/}
 
 security:
   sessions: stateless
